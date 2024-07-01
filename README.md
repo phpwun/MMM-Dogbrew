@@ -1,6 +1,6 @@
-# MMM-Brewdog [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/fewieden/MMM-ip/master/LICENSE)
+# MMM-DogBrew [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/fewieden/MMM-ip/master/LICENSE)
 
-Simple module for MagicMirror<sup>2</sup> that utilizes the Brewdog API to fetch a random beer
+Simple module for MagicMirror<sup>2</sup> that utilizes the api.catalog.beer to fetch a random beer
 
 API: https://api.punkapi.com/v2/beers/random (no key needed)
 
@@ -13,20 +13,26 @@ API: https://api.punkapi.com/v2/beers/random (no key needed)
 
 * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
 * No other dependencies required
+* api.catalog.beer api key 
 
 ## Installation
 
-1. Clone this repo: `git clone https://github.com/jsteel715/MMM-Brewdog` into `~/MagicMirror/modules` directory. 
-1. Configure your `~/MagicMirror/config/config.js`:
+1. Clone this repo: `git clone https://github.com/jsteel715/MMM-Brewdog` into `~/MagicMirror/modules` directory.
+2. Create an account at https://catalog.beer/signup and get an API Key
+3. Configure your `~/MagicMirror/config/config.js`:
+4. Ensure your API Key is added to both the Config and the Brewdog.js file
 
 ```
 {
-    module: 'MMM-Brewdog',
+    module: 'Brewdog',
     position: 'top_left',
     config: {
-        ...
+        useheader: true,
+        header: "Here's a new beer!",
+        updateInterval: 60000,
+        apiKey: "APIKEYHERE"
     }
-}
+},
 ```
 
 ## Config Options
