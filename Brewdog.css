@@ -1,0 +1,69 @@
+/* Brewdog Module Custom CSS */
+
+.Brewdog .header {
+    color: #BEBEBE;             /* Match header color with the widget above */
+    text-align: left;           /* Align header text. (left, center, right) */
+    white-space: nowrap;        /* Prevent text wrapping */
+    font-size: 20px;            /* Increased font size for better visibility */
+    border-bottom: 1px solid #BEBEBE; /* Add a border to match the style above */
+    margin-bottom: 10px;        /* Space below the header */
+}
+
+.Brewdog .wrapper div {   /* Apply styles to all divs within wrapper */
+    color: #FFFFFF;             /* Ensure all text is white for consistency */
+    font-size: 16px;            /* Uniform font size for details */
+    font-weight: normal;        /* Normal font weight */
+    padding-left: 10px;         /* Align text with header */
+}
+
+.wrapper {
+    max-width: 100%;            /* Matched to the maximum width set in config */
+    overflow: hidden;           /* Hide any overflowing elements */
+}
+
+.bright {
+    color: #fff;                /* Ensure text is bright white */
+}
+
+.small,
+.xsmall {
+    font-size: 14px;            /* Smaller font size for less critical information */
+    color: #BEBEBE;             /* Grey text for contrast */
+    padding-left: 10px;         /* Uniform padding for alignment */
+}
+
+.light {
+    font-weight: 300;           /* Lighter font weight for aesthetic reasons */
+}
+
+.list-row {
+    display: flex;
+    flex-direction: column;     /* Ensure elements within list-row are stacked */
+}
+
+.list-row div {
+    opacity: 1;                 /* Start fully opaque */
+    transition: opacity 0.5s ease-in-out; /* Smooth transitions for opacity changes */
+}
+
+/* Gradual opacity decrease for each subsequent line */
+.list-row div:nth-child(1) { opacity: 1; }
+.list-row div:nth-child(2) { opacity: 0.8; }
+.list-row div:nth-child(3) { opacity: 0.6; }
+.list-row div:nth-child(4) { opacity: 0.4; }
+.list-row div:nth-child(5) { opacity: 0.2; }
+
+/* Specific non-fading elements */
+.Brewdog .header, .Brewdog .header + div {
+    transition: none;           /* No transition effect to keep header static */
+    font-size: 18px;            /* Font size for subheader */
+}
+
+/* New Title for Beer Info */
+.new-beer-info {
+    font-size: 20px;            /* Font size for new beer info title */
+    color: #FFFFFF;             /* White color for visibility */
+    text-transform: uppercase;  /* Uppercase text for emphasis */
+    padding-bottom: 5px;        /* Padding below the title */
+    border-bottom: 1px solid #BEBEBE; /* Line under the title similar to the weather forecast */
+}
