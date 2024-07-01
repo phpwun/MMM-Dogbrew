@@ -17,7 +17,7 @@ API: https://api.punkapi.com/v2/beers/random (no key needed)
 
 ## Installation
 
-1. Clone this repo: `git clone https://github.com/jsteel715/MMM-Brewdog` into `~/MagicMirror/modules` directory.
+1. Clone this repo: `git clone https://github.com/phpwun/MMM-Dogbrew/tree/master` into `~/MagicMirror/modules` directory.
 2. Create an account at https://catalog.beer/signup and get an API Key
 3. Configure your `~/MagicMirror/config/config.js`:
 4. Ensure your API Key is added to both the Config and the Brewdog.js file
